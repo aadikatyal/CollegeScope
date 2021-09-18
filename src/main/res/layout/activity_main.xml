@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/textColor"
+            android:text="Recommended Colleges"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/sbRange"
+                android:layout_width="296dp"
+                android:layout_marginTop="15dp"
+                android:progressBackgroundTint="@color/sbColor"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:id="@+id/btnFind"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"
+                android:text="Find" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRange"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Range: 0.0 miles"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPlaceholder"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"></ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/sp_type"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <View android:id="@+id/separator2"
+        android:background="@color/backgroundColor"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="180dp"
+        android:layout_centerVertical ="true"
+        android:layout_alignParentTop="true"/>
+
+    <Switch
+        android:id="@+id/switchMap"
+        android:textColor="@color/textColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="380dp"
+        android:text="Info"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="180dp">
+
+        <fragment
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_height="198dp"
+            android:layout_width="match_parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+
+    <View android:id="@+id/separator"
+        android:background="@color/backgroundColor"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="410dp"
+        android:layout_centerVertical ="true"
+        android:layout_alignParentTop="true"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="410dp">
+    </ListView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@android:color/background_dark"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>
