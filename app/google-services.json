@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "454915336741",
+    "project_id": "collegescope",
+    "storage_bucket": "collegescope.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454915336741:android:797bf6498f934b183cedcc",
+        "android_client_info": {
+          "package_name": "com.example.collegescope"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454915336741-4cm5kfothk2u686g4ps0cjmsn4hhcpss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVvRE4KTbTE0AEfAZOii3pmgBoNz5dwcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454915336741-4cm5kfothk2u686g4ps0cjmsn4hhcpss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
